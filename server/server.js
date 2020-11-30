@@ -21,7 +21,8 @@ server.on('request', function(req, res) {
 server.listen(3000);
 
 // WebSocletサーバーを立てる
-var wsServer = new ws.Server({port:3001})
+// 立ててあるサーバー渡してあげると、そのサーバーそのままWebSocketとしても使える
+var wsServer = new ws.Server({server:server})
 // コネクションが生成された時
 wsServer.on('connection', socket => {
     console.log("connection open")

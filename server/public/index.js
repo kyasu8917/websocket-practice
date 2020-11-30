@@ -1,5 +1,5 @@
 // WebSocketのコネクション生成
-let socket = new WebSocket("ws://localhost:3001");
+let socket = new WebSocket("ws://localhost:3000");
 // メッセージを受け取った時の処理
 socket.onmessage = (m) => { getMessgae(m.data) };
 
